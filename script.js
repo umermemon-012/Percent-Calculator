@@ -1,22 +1,22 @@
-let percentage = prompt("Enter Your HTML test Percenatge");
-percentage = Number(percentage);
+let percentage = prompt("Please enter your percentage:");
 
-if (percentage > 100) {
-    alert("Invalid");
-} else if (percentage < 0) {
-    alert("Invalid");
-} else if (percentage >= 80) {
-    alert("A+ Grade");
-} else if (percentage >= 75) {
-    alert("A Grade");
-} else if (percentage >= 70) {
-    alert("B Grade");
-} else if (percentage >= 60) {
-    alert("C Grade");
-} else if (percentage >= 50) {
-    alert("D Grade");
-} else if (percentage >= 40) {
-    alert("E Grade");
+if (percentage === "" || percentage < 0 || percentage > 100 || percentage !== String(Number(percentage))) {
+  alert("Invalid input! Please enter a valid percentage between 0 and 100.");
 } else {
-    alert("Fail");
+  percentage = Number(percentage);
+  if (percentage >= 90) {
+    alert("Your grade is: A+");
+  } else if (percentage >= 80) {
+    alert("Your grade is: A");
+  } else if (percentage >= 70) {
+    alert("Your grade is: B+");
+  } else if (percentage >= 60) {
+    alert("Your grade is: B");
+  } else if (percentage >= 50) {
+    alert("Your grade is: C+");
+  } else if (percentage >= 40) {
+    alert("Your grade is: C") 
+  } else {
+    alert("Your grade is: Fail");
+  }
 }
